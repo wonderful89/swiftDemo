@@ -14,6 +14,7 @@
 		7833B1D42412255800943396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1D32412255800943396 /* Assets.xcassets */; };
 		7833B1D72412255800943396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1D52412255800943396 /* LaunchScreen.storyboard */; };
 		7833B1E32412279400943396 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1E22412279400943396 /* log.swift */; };
+		7833B1E5241233A000943396 /* log2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1E4241233A000943396 /* log2.swift */; };
 		B3A1055AB1CC79262AC50B60 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DC8A6337703827647BC8FD /* Pods_SwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		7833B1D62412255800943396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7833B1D82412255800943396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7833B1E22412279400943396 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
+		7833B1E4241233A000943396 /* log2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7833B1E22412279400943396 /* log.swift */,
+				7833B1E4241233A000943396 /* log2.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				7833B1CF2412255300943396 /* ViewController.swift in Sources */,
 				7833B1CB2412255300943396 /* AppDelegate.swift in Sources */,
+				7833B1E5241233A000943396 /* log2.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */,
 			);

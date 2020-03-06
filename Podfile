@@ -7,5 +7,6 @@ target 'SwiftDemo' do
 
   # Pods for SwiftDemo
   pod 'SwiftyBeaver'
+  pod 'Log'
   
 end

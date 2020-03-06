@@ -1,16 +1,20 @@
 PODS:
+  - Log (2.0)
   - SwiftyBeaver (1.8.4)
 
 DEPENDENCIES:
+  - Log
   - SwiftyBeaver
 
 SPEC REPOS:
   trunk:
+    - Log
     - SwiftyBeaver
 
 SPEC CHECKSUMS:
+  Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
 
-PODFILE CHECKSUM: 2fa8968a9134ef338ecba4f0d5e7d69869055f2d
+PODFILE CHECKSUM: 30852892f7fb0a9c95ce5f10060434bd3778cc8c
 
 COCOAPODS: 1.8.4

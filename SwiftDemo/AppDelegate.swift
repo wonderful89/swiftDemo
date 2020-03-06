@@ -12,9 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        initLog()
-        log.info("didFinishLaunchingWithOptions")
-        log.warning("")
+//        initLog()
+        testLog2()
+        Log.info("didFinishLaunchingWithOptions")
+        Log.warning("")
         return true
     }
 
