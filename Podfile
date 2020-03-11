@@ -8,5 +8,7 @@ target 'SwiftDemo' do
   # Pods for SwiftDemo
   pod 'SwiftyBeaver'
   pod 'Log'
+  pod 'SnapKit'
+  pod 'HandyJSON', '~> 5.0.1'
   
 end

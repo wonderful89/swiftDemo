@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum TestConfig : String,CaseIterable{
-    
+enum TestConfig: String, CaseIterable {
+
     case UIGroup = "UI分组"
     case LogicGroup = "逻辑分组"
     case AnimationGroup = "动画分组"
-    
-    static func getGroupLength(test:TestConfig) -> Int {
+
+    static func getGroupLength(test: TestConfig) -> Int {
         var length: Int
         switch test {
         case .UIGroup:
@@ -26,8 +26,8 @@ enum TestConfig : String,CaseIterable{
         }
         return length
     }
-    
-    static func getGroupItem(test:TestConfig, index:Int) -> String {
+
+    static func getGroupItem(test: TestConfig, index: Int) -> String {
         var retStr: String
         switch test {
         case .UIGroup:
@@ -39,16 +39,16 @@ enum TestConfig : String,CaseIterable{
         }
         return retStr
     }
-    
-    enum UI : String,CaseIterable{
-        case aaa,bbb,ccc
+
+    enum UI: String, CaseIterable {
+        case aaa, bbb, ccc
     }
-    
-    enum Logic: String,CaseIterable {
-        case ddd222,bbb33,ccc
+
+    enum Logic: String, CaseIterable {
+        case ddd222, bbb33, ccc
     }
-    
-    enum Animation: String,CaseIterable {
-        case aaa444,bbb,ccc
+
+    enum Animation: String, CaseIterable {
+        case aaa444, bbb, ccc
     }
 }

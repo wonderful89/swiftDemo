@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="SwiftDemo" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="LXd-Bo-1RG" id="gKG-ub-9XG"/>
+                <outlet property="tableView" destination="LXd-Bo-1RG" id="3UL-SZ-Sod"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

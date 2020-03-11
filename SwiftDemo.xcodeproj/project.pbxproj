@@ -15,6 +15,8 @@
 		7833B1D72412255800943396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7833B1D52412255800943396 /* LaunchScreen.storyboard */; };
 		7833B1E32412279400943396 /* log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1E22412279400943396 /* log.swift */; };
 		7833B1E5241233A000943396 /* log2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1E4241233A000943396 /* log2.swift */; };
+		78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AFC2418BAF300695919 /* LayoutViewController.swift */; };
+		78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78784AFD2418BAF300695919 /* LayoutViewController.xib */; };
 		78A95E3D241289F60080812A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3B241289F60080812A /* MainViewController.swift */; };
 		78A95E3E241289F60080812A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A95E3C241289F60080812A /* MainViewController.xib */; };
 		78A95E4024128DC10080812A /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3F24128DC10080812A /* TestConfig.swift */; };
@@ -36,6 +38,8 @@
 		7833B1D82412255800943396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7833B1E22412279400943396 /* log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log.swift; sourceTree = "<group>"; };
 		7833B1E4241233A000943396 /* log2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log2.swift; sourceTree = "<group>"; };
+		78784AFC2418BAF300695919 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
+		78784AFD2418BAF300695919 /* LayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutViewController.xib; sourceTree = "<group>"; };
 		78A95E3B241289F60080812A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		78A95E3C241289F60080812A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		78A95E3F24128DC10080812A /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		7833B1DF2412275F00943396 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				78784AF92418BAC000695919 /* UI */,
 				78A95E3A241289AE0080812A /* Main */,
 			);
 			path = Functions;
@@ -119,6 +124,23 @@
 				7833B1E4241233A000943396 /* log2.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		78784AF92418BAC000695919 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				78784AFB2418BAD300695919 /* 自动布局 */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		78784AFB2418BAD300695919 /* 自动布局 */ = {
+			isa = PBXGroup;
+			children = (
+				78784AFC2418BAF300695919 /* LayoutViewController.swift */,
+				78784AFD2418BAF300695919 /* LayoutViewController.xib */,
+			);
+			path = "自动布局";
 			sourceTree = "<group>";
 		};
 		78A95E3A241289AE0080812A /* Main */ = {
@@ -165,6 +187,7 @@
 			buildConfigurationList = 7833B1DB2412255800943396 /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
 			buildPhases = (
 				F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */,
+				787ED7462419364D007D7E75 /* ShellScript */,
 				7833B1C32412255200943396 /* Sources */,
 				7833B1C42412255200943396 /* Frameworks */,
 				7833B1C52412255200943396 /* Resources */,
@@ -218,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7833B1D72412255800943396 /* LaunchScreen.storyboard in Resources */,
+				78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */,
 				7833B1D42412255800943396 /* Assets.xcassets in Resources */,
 				7833B1D22412255300943396 /* Main.storyboard in Resources */,
 				78A95E3E241289F60080812A /* MainViewController.xib in Resources */,
@@ -243,6 +267,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		787ED7462419364D007D7E75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"in inner script, 当前目录：\"\necho `pwd`\necho \"转到工程目录：$PRODUCT_NAME\"\ncd $PRODUCT_NAME\nif which swiftlint >/dev/null; then\n  echo \"工程目录$PRODUCT_NAME 进行自动格式化\"\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit\n";
 		};
 		F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -277,6 +318,7 @@
 				7833B1CB2412255300943396 /* AppDelegate.swift in Sources */,
 				7833B1E5241233A000943396 /* log2.swift in Sources */,
 				78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */,
+				78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */,
