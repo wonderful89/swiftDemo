@@ -283,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"in inner script, 当前目录：\"\necho `pwd`\necho \"转到工程目录：$PRODUCT_NAME\"\ncd $PRODUCT_NAME\nif which swiftlint >/dev/null; then\n  echo \"工程目录$PRODUCT_NAME 进行自动格式化\"\n  swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit\n";
+			shellScript = "echo \"in inner script, 当前目录：\"\necho `pwd`\n#echo \"转到工程目录：$PRODUCT_NAME\"\n#cd $PRODUCT_NAME\nif which swiftlint >/dev/null; then\n  echo \"工程目录$PRODUCT_NAME 进行自动格式化\"\n  swiftlint\n  #swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit\n";
 		};
 		F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

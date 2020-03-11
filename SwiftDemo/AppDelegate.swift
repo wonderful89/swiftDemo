@@ -15,9 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         initLog()
         log.info("didFinishLaunchingWithOptions")
-        let nav = UINavigationController()
-        nav.viewControllers = [MainViewController()]
-        window?.rootViewController = nav
+        if #available(iOS 13, *) {
+
+        } else {
+            AppDelegate.configWindow(window: window)
+        }
         return true
     }
 
@@ -31,5 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         log.info("didDiscardSceneSessions")
     }
+}
 
+private typealias AppDelegateConfig = AppDelegate
+extension AppDelegateConfig {
+    static func configWindow(window: UIWindow?) {
+        log.info("configWindow")
+        let nav = UINavigationController()
+        nav.viewControllers = [MainViewController()]
+        window?.rootViewController = nav
+    }
 }

@@ -20,12 +20,14 @@ class MainViewController: UIViewController {
     }
 }
 
-private typealias MainViewController_TableView = MainViewController
-extension MainViewController_TableView: UITableViewDelegate, UITableViewDataSource {
+private typealias MainViewControllerTableView = MainViewController
+extension MainViewControllerTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TestConfig.getGroupLength(test: TestConfig.allCases[section])
     }
-
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 61
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return TestConfig.allCases.count
     }

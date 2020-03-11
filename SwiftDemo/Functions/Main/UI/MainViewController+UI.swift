@@ -8,8 +8,8 @@
 
 import Foundation
 
-private typealias MainViewController_UI = MainViewController
-extension MainViewController_UI {
+private typealias MainViewControllerUI = MainViewController
+extension MainViewControllerUI {
     func handleUI(type: String) {
         log.info("handleUI: \(type)")
     }

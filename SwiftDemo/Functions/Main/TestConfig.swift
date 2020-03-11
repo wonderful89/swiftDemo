@@ -11,17 +11,17 @@ import Foundation
 enum TestConfig: String, CaseIterable {
 
     case UIGroup = "UI分组"
-    case LogicGroup = "逻辑分组"
-    case AnimationGroup = "动画分组"
+    case logicGroup = "逻辑分组"
+    case animationGroup = "动画分组"
 
     static func getGroupLength(test: TestConfig) -> Int {
         var length: Int
         switch test {
         case .UIGroup:
             length = UI.allCases.count
-        case .LogicGroup:
+        case .logicGroup:
             length = Logic.allCases.count
-        case .AnimationGroup:
+        case .animationGroup:
             length = Animation.allCases.count
         }
         return length
@@ -32,9 +32,9 @@ enum TestConfig: String, CaseIterable {
         switch test {
         case .UIGroup:
             retStr = UI.allCases[index].rawValue
-        case .LogicGroup:
+        case .logicGroup:
             retStr = Logic.allCases[index].rawValue
-        case .AnimationGroup:
+        case .animationGroup:
             retStr = Animation.allCases[index].rawValue
         }
         return retStr
