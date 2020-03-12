@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781A2081241A42950027DA17 /* FilePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A207F241A42950027DA17 /* FilePreViewController.swift */; };
+		781A2082241A42950027DA17 /* FilePreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781A2080241A42950027DA17 /* FilePreViewController.xib */; };
+		781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A2083241A42BF0027DA17 /* DocQLPreviewController.swift */; };
+		781A2086241A430B0027DA17 /* DemoFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A2085241A430B0027DA17 /* DemoFile.swift */; };
+		781A2088241A44ED0027DA17 /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 781A2087241A44ED0027DA17 /* test.pdf */; };
+		781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A208B241A456D0027DA17 /* MainViewController+Login.swift */; };
+		781A208F241A4CB00027DA17 /* FileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A208D241A4CB00027DA17 /* FileNavigationController.swift */; };
+		781A2090241A4CB00027DA17 /* FileNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781A208E241A4CB00027DA17 /* FileNavigationController.xib */; };
+		781A2094241A520A0027DA17 /* test.dart in Resources */ = {isa = PBXBuildFile; fileRef = 781A2093241A520A0027DA17 /* test.dart */; };
+		781A2095241A52890027DA17 /* test.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 781A2092241A51F40027DA17 /* test.xlsx */; };
+		781A2097241A544B0027DA17 /* FileConfigStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A2096241A544B0027DA17 /* FileConfigStyle.swift */; };
 		7833B1CB2412255300943396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1CA2412255300943396 /* AppDelegate.swift */; };
 		7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1CC2412255300943396 /* SceneDelegate.swift */; };
 		7833B1CF2412255300943396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1CE2412255300943396 /* ViewController.swift */; };
@@ -28,6 +39,17 @@
 		39DC8A6337703827647BC8FD /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5576A87778F9A7626CAC65DA /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5AB23C81D5D27EA6596E7294 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		781A207F241A42950027DA17 /* FilePreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePreViewController.swift; sourceTree = "<group>"; };
+		781A2080241A42950027DA17 /* FilePreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilePreViewController.xib; sourceTree = "<group>"; };
+		781A2083241A42BF0027DA17 /* DocQLPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocQLPreviewController.swift; sourceTree = "<group>"; };
+		781A2085241A430B0027DA17 /* DemoFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFile.swift; sourceTree = "<group>"; };
+		781A2087241A44ED0027DA17 /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test.pdf; sourceTree = "<group>"; };
+		781A208B241A456D0027DA17 /* MainViewController+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Login.swift"; sourceTree = "<group>"; };
+		781A208D241A4CB00027DA17 /* FileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationController.swift; sourceTree = "<group>"; };
+		781A208E241A4CB00027DA17 /* FileNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileNavigationController.xib; sourceTree = "<group>"; };
+		781A2092241A51F40027DA17 /* test.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.xlsx; sourceTree = "<group>"; };
+		781A2093241A520A0027DA17 /* test.dart */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.dart; sourceTree = "<group>"; };
+		781A2096241A544B0027DA17 /* FileConfigStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileConfigStyle.swift; sourceTree = "<group>"; };
 		7833B1C72412255300943396 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7833B1CA2412255300943396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7833B1CC2412255300943396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +80,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		781A207E241A420F0027DA17 /* 文件查看 */ = {
+			isa = PBXGroup;
+			children = (
+				781A208D241A4CB00027DA17 /* FileNavigationController.swift */,
+				781A208E241A4CB00027DA17 /* FileNavigationController.xib */,
+				781A207F241A42950027DA17 /* FilePreViewController.swift */,
+				781A2080241A42950027DA17 /* FilePreViewController.xib */,
+				781A2083241A42BF0027DA17 /* DocQLPreviewController.swift */,
+				781A2085241A430B0027DA17 /* DemoFile.swift */,
+				781A2096241A544B0027DA17 /* FileConfigStyle.swift */,
+			);
+			path = "文件查看";
+			sourceTree = "<group>";
+		};
+		781A2089241A45500027DA17 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				781A208B241A456D0027DA17 /* MainViewController+Login.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		781A208A241A45560027DA17 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		781A2091241A51B30027DA17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				781A2087241A44ED0027DA17 /* test.pdf */,
+				781A2093241A520A0027DA17 /* test.dart */,
+				781A2092241A51F40027DA17 /* test.xlsx */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7833B1BE2412255200943396 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +140,7 @@
 		7833B1C92412255300943396 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				781A2091241A51B30027DA17 /* Resources */,
 				7833B1E02412277100943396 /* Commons */,
 				7833B1DF2412275F00943396 /* Functions */,
 				7833B1DE2412275100943396 /* Components */,
@@ -129,6 +191,7 @@
 		78784AF92418BAC000695919 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				781A207E241A420F0027DA17 /* 文件查看 */,
 				78784AFB2418BAD300695919 /* 自动布局 */,
 			);
 			path = UI;
@@ -146,6 +209,8 @@
 		78A95E3A241289AE0080812A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				781A208A241A45560027DA17 /* Animation */,
+				781A2089241A45500027DA17 /* Logic */,
 				78A95E43241298A70080812A /* UI */,
 				78A95E3F24128DC10080812A /* TestConfig.swift */,
 				78A95E3B241289F60080812A /* MainViewController.swift */,
@@ -241,10 +306,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7833B1D72412255800943396 /* LaunchScreen.storyboard in Resources */,
+				781A2090241A4CB00027DA17 /* FileNavigationController.xib in Resources */,
 				78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */,
+				781A2082241A42950027DA17 /* FilePreViewController.xib in Resources */,
 				7833B1D42412255800943396 /* Assets.xcassets in Resources */,
 				7833B1D22412255300943396 /* Main.storyboard in Resources */,
 				78A95E3E241289F60080812A /* MainViewController.xib in Resources */,
+				781A2088241A44ED0027DA17 /* test.pdf in Resources */,
+				781A2095241A52890027DA17 /* test.xlsx in Resources */,
+				781A2094241A520A0027DA17 /* test.dart in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,13 +386,19 @@
 			files = (
 				7833B1CF2412255300943396 /* ViewController.swift in Sources */,
 				7833B1CB2412255300943396 /* AppDelegate.swift in Sources */,
+				781A2081241A42950027DA17 /* FilePreViewController.swift in Sources */,
 				7833B1E5241233A000943396 /* log2.swift in Sources */,
 				78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */,
 				78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */,
+				781A2086241A430B0027DA17 /* DemoFile.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
+				781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
+				781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */,
+				781A208F241A4CB00027DA17 /* FileNavigationController.swift in Sources */,
 				7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */,
 				78A95E4024128DC10080812A /* TestConfig.swift in Sources */,
+				781A2097241A544B0027DA17 /* FileConfigStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

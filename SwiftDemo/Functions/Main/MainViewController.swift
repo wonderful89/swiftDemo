@@ -9,8 +9,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +24,11 @@ extension MainViewControllerTableView: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TestConfig.getGroupLength(test: TestConfig.allCases[section])
     }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 61
     }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return TestConfig.allCases.count
     }
@@ -45,7 +46,7 @@ extension MainViewControllerTableView: UITableViewDelegate, UITableViewDataSourc
         let row = indexPath.row
         let configEnum = TestConfig.allCases[indexPath.section]
         let indexStr = TestConfig.getGroupItem(test: configEnum, index: row)
-        cell!.textLabel?.text = "\(row+1). \(indexStr)"
+        cell!.textLabel?.text = "\(row + 1). \(indexStr)"
 
         return cell!
     }
@@ -65,6 +66,8 @@ extension MainViewControllerTableView: UITableViewDelegate, UITableViewDataSourc
         switch value {
         case .UIGroup:
             handleUI(type: indexStr)
+        case .logicGroup:
+            handleLogic(type: indexStr)
 
         default:
             log.warning("没有得到处理")

@@ -45,7 +45,7 @@ enum TestConfig: String, CaseIterable {
     }
 
     enum Logic: String, CaseIterable {
-        case ddd222, bbb33, ccc
+        case openFile, bbb33, ccc
     }
 
     enum Animation: String, CaseIterable {

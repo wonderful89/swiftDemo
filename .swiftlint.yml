@@ -2,9 +2,16 @@ disabled_rules: # 执行时排除掉的规则
   - colon
   - comma
   - control_statement
+  - opening_brace # { 位置要不要放在下一行
+  - force_try
+  - force_cast
+  - switch_case_on_newline
+  - todo
+  - orphaned_doc_comment
+  - unused_optional_binding
 opt_in_rules: # 一些规则仅仅是可选的
   - empty_count
-  - missing_docs
+  # - missing_docs
   # 可以通过执行如下指令来查找所有可用的规则:
   # swiftlint rules
 included: # 执行 linting 时包含的路径。如果出现这个 `--path` 会被忽略。
@@ -34,6 +41,7 @@ file_length:
 # 命名规则可以设置最小长度和最大程度的警告/错误
 # 此外它们也可以设置排除在外的名字
 type_name:
+  allowed_symbols: "_"  # 包括typealias的名字
   min_length: 2 # 只是警告
   max_length: # 警告和错误
     warning: 40
@@ -41,8 +49,10 @@ type_name:
   excluded: iPhone # 排除某个名字
 
 identifier_name:
-  min_length: # 只有最小长度
+  allowed_symbols: "_"
+  min_length: #只有最小长度
     error: 2 # 只有错误
+    warning: 2
   # excluded: # 排除某些名字
   #   - id
   #   - URL

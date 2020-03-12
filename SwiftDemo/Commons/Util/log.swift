@@ -29,7 +29,7 @@ func initLog() {
     print("filePath = \(file.logFileURL?.absoluteString ?? "null")")
 #endif
 
-    //    let cloud = SBPlatformDestination(appID: "foo", appSecret: "bar", encryptionKey: "123") // to cloud
+    ///    let cloud = SBPlatformDestination(appID: "foo", appSecret: "bar", encryptionKey: "123") // to cloud
     /// log hour, minute and second, filename, function, line, log level & message
     /// console.format = "$DHH:mm:ss$d $N.$F():$l $L: $M"
     console.format = "$L $DHH:mm:ss$d $N $M"
