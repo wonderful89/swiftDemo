@@ -9,6 +9,8 @@ disabled_rules: # 执行时排除掉的规则
   - todo
   - orphaned_doc_comment
   - unused_optional_binding
+  - trailing_whitespace
+  - no_fallthrough_only
 opt_in_rules: # 一些规则仅仅是可选的
   - empty_count
   # - missing_docs
@@ -29,7 +31,7 @@ force_try:
   severity: warning # 显式
 # 同时有警告和错误等级的规则，可以只设置它的警告等级
 # 隐式
-line_length: 200
+line_length: 2000
 # 可以通过一个数组同时进行隐式设置
 type_body_length:
   - 300 # warning

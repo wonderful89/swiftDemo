@@ -1,12 +1,12 @@
 //
-//  FileNavigationController.swift
+//  FileNavigationBar.swift
 //  SwiftDemo
 //
-//  Created by qianzhao on 2020/3/12.
+//  Created by qianzhao on 2020/3/13.
 //  Copyright © 2020 qianzhao. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public class FileNavigationBar: UINavigationBar {
     public var backgroundView: UIView = UIView()
@@ -75,7 +75,7 @@ public class FileNavigationBar: UINavigationBar {
         // 设置返回view的image
         navigationBar?.backIndicatorImage = UIImage(named: "navigationBar_back")
         // 设置backButton的title
-        navigationBar?.topItem?.title = ""
+        // navigationBar?.topItem?.title = ""
         if let _ = navBack {
             navigationBar?.topItem?.backBarButtonItem?.action = #selector(self.navBackEvent(_:))
             navigationBar?.topItem?.backBarButtonItem?.target = self
@@ -87,78 +87,5 @@ public class FileNavigationBar: UINavigationBar {
     public override func layoutSubviews() {
         super.layoutSubviews()
         sendSubviewToBack(backgroundView)
-    }
-}
-
-class FileNavigationController: UINavigationController {
-    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
-    public override init(rootViewController: UIViewController) {
-        super.init(navigationBarClass: FileNavigationBar.classForCoder(), toolbarClass: nil)
-        viewControllers = [rootViewController]
-    }
-
-    public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    @objc func backButtonEvent(_ sender: Any) {
-        log.info("backButtonEvent")
-        self.dismiss(animated: true, completion: nil)
-    }
-
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        (navigationBar as! FileNavigationBar).navBack = backButtonEvent
-        (navigationBar as! FileNavigationBar).configBlack()
-        // 这里设置的不起作用
-        // navigationItem.backBarButtonItem = UIBarButtonItem(title: "11", style: .plain, target: self, action: #selector(backButtonEvent(_:)))
-    }
-
-    public override var prefersStatusBarHidden: Bool {
-        return topViewController?.prefersStatusBarHidden ?? false
-    }
-
-    public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return topViewController?.preferredStatusBarStyle ?? .default
-    }
-
-    public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return self.topViewController?.preferredStatusBarUpdateAnimation ?? .slide
-    }
-
-    open override var shouldAutorotate: Bool {
-        return self.topViewController?.shouldAutorotate ?? super.shouldAutorotate
-    }
-
-    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return self.topViewController?.supportedInterfaceOrientations ?? super.supportedInterfaceOrientations
-    }
-
-    open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if !children.isEmpty {
-            viewController.hidesBottomBarWhenPushed = true
-        }
-
-        super.pushViewController(viewController, animated: animated)
-    }
-}
-
-extension UIImage {
-    // 纯颜色图片
-    public static func color(_ size: CGSize, _ color: UIColor) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return nil
-        }
-
-        color.setFill()
-        context.fill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
-
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return image
     }
 }

@@ -22,7 +22,7 @@ extension MainViewController_Logic {
     }
 
     func openFile() {
-        let vc = FilePreViewController()
+        let vc = FileTestViewController()
         let nav = FileNavigationController(rootViewController: vc)
 
         self.navigationController?.present(nav, animated: true, completion: nil)

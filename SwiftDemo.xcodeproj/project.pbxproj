@@ -18,6 +18,8 @@
 		781A2094241A520A0027DA17 /* test.dart in Resources */ = {isa = PBXBuildFile; fileRef = 781A2093241A520A0027DA17 /* test.dart */; };
 		781A2095241A52890027DA17 /* test.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 781A2092241A51F40027DA17 /* test.xlsx */; };
 		781A2097241A544B0027DA17 /* FileConfigStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A2096241A544B0027DA17 /* FileConfigStyle.swift */; };
+		781A209B241B34CC0027DA17 /* FileTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A2099241B34CC0027DA17 /* FileTestViewController.swift */; };
+		781A209C241B34CC0027DA17 /* FileTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781A209A241B34CC0027DA17 /* FileTestViewController.xib */; };
 		7833B1CB2412255300943396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1CA2412255300943396 /* AppDelegate.swift */; };
 		7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1CC2412255300943396 /* SceneDelegate.swift */; };
 		7833B1CF2412255300943396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1CE2412255300943396 /* ViewController.swift */; };
@@ -28,6 +30,14 @@
 		7833B1E5241233A000943396 /* log2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833B1E4241233A000943396 /* log2.swift */; };
 		78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78784AFC2418BAF300695919 /* LayoutViewController.swift */; };
 		78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78784AFD2418BAF300695919 /* LayoutViewController.xib */; };
+		787B22F6241B696E00DDA9F3 /* FileTestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B22F4241B696E00DDA9F3 /* FileTestTableViewCell.swift */; };
+		787B22F7241B696E00DDA9F3 /* FileTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787B22F5241B696E00DDA9F3 /* FileTestTableViewCell.xib */; };
+		787B22FB241B701C00DDA9F3 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 787B22FA241B701C00DDA9F3 /* UIView+Toast.m */; };
+		787B22FD241B704300DDA9F3 /* UIViewController+Extern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B22FC241B704300DDA9F3 /* UIViewController+Extern.swift */; };
+		787B2304241B75A500DDA9F3 /* FileDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B2302241B75A500DDA9F3 /* FileDownloadViewController.swift */; };
+		787B2305241B75A500DDA9F3 /* FileDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787B2303241B75A500DDA9F3 /* FileDownloadViewController.xib */; };
+		787B2307241B965C00DDA9F3 /* FileNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B2306241B965C00DDA9F3 /* FileNavigationBar.swift */; };
+		787B230A241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */; };
 		78A95E3D241289F60080812A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3B241289F60080812A /* MainViewController.swift */; };
 		78A95E3E241289F60080812A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A95E3C241289F60080812A /* MainViewController.xib */; };
 		78A95E4024128DC10080812A /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3F24128DC10080812A /* TestConfig.swift */; };
@@ -50,6 +60,8 @@
 		781A2092241A51F40027DA17 /* test.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.xlsx; sourceTree = "<group>"; };
 		781A2093241A520A0027DA17 /* test.dart */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.dart; sourceTree = "<group>"; };
 		781A2096241A544B0027DA17 /* FileConfigStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileConfigStyle.swift; sourceTree = "<group>"; };
+		781A2099241B34CC0027DA17 /* FileTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTestViewController.swift; sourceTree = "<group>"; };
+		781A209A241B34CC0027DA17 /* FileTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTestViewController.xib; sourceTree = "<group>"; };
 		7833B1C72412255300943396 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7833B1CA2412255300943396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7833B1CC2412255300943396 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +74,16 @@
 		7833B1E4241233A000943396 /* log2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = log2.swift; sourceTree = "<group>"; };
 		78784AFC2418BAF300695919 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		78784AFD2418BAF300695919 /* LayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LayoutViewController.xib; sourceTree = "<group>"; };
+		787B22F4241B696E00DDA9F3 /* FileTestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTestTableViewCell.swift; sourceTree = "<group>"; };
+		787B22F5241B696E00DDA9F3 /* FileTestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileTestTableViewCell.xib; sourceTree = "<group>"; };
+		787B22F9241B701C00DDA9F3 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		787B22FA241B701C00DDA9F3 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		787B22FC241B704300DDA9F3 /* UIViewController+Extern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extern.swift"; sourceTree = "<group>"; };
+		787B2301241B715D00DDA9F3 /* ExportOCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExportOCHeader.h; sourceTree = "<group>"; };
+		787B2302241B75A500DDA9F3 /* FileDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadViewController.swift; sourceTree = "<group>"; };
+		787B2303241B75A500DDA9F3 /* FileDownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileDownloadViewController.xib; sourceTree = "<group>"; };
+		787B2306241B965C00DDA9F3 /* FileNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationBar.swift; sourceTree = "<group>"; };
+		787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationControllerProtocol.swift; sourceTree = "<group>"; };
 		78A95E3B241289F60080812A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		78A95E3C241289F60080812A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		78A95E3F24128DC10080812A /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
@@ -83,13 +105,15 @@
 		781A207E241A420F0027DA17 /* 文件查看 */ = {
 			isa = PBXGroup;
 			children = (
-				781A208D241A4CB00027DA17 /* FileNavigationController.swift */,
-				781A208E241A4CB00027DA17 /* FileNavigationController.xib */,
+				787B2308241B966600DDA9F3 /* nav */,
+				781A2098241B34AC0027DA17 /* Test */,
 				781A207F241A42950027DA17 /* FilePreViewController.swift */,
 				781A2080241A42950027DA17 /* FilePreViewController.xib */,
 				781A2083241A42BF0027DA17 /* DocQLPreviewController.swift */,
 				781A2085241A430B0027DA17 /* DemoFile.swift */,
 				781A2096241A544B0027DA17 /* FileConfigStyle.swift */,
+				787B2302241B75A500DDA9F3 /* FileDownloadViewController.swift */,
+				787B2303241B75A500DDA9F3 /* FileDownloadViewController.xib */,
 			);
 			path = "文件查看";
 			sourceTree = "<group>";
@@ -119,6 +143,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		781A2098241B34AC0027DA17 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				781A2099241B34CC0027DA17 /* FileTestViewController.swift */,
+				781A209A241B34CC0027DA17 /* FileTestViewController.xib */,
+				787B22F4241B696E00DDA9F3 /* FileTestTableViewCell.swift */,
+				787B22F5241B696E00DDA9F3 /* FileTestTableViewCell.xib */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		7833B1BE2412255200943396 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +180,7 @@
 				7833B1DF2412275F00943396 /* Functions */,
 				7833B1DE2412275100943396 /* Components */,
 				7833B1CA2412255300943396 /* AppDelegate.swift */,
+				787B2301241B715D00DDA9F3 /* ExportOCHeader.h */,
 				7833B1CC2412255300943396 /* SceneDelegate.swift */,
 				7833B1CE2412255300943396 /* ViewController.swift */,
 				7833B1D02412255300943396 /* Main.storyboard */,
@@ -174,6 +210,7 @@
 		7833B1E02412277100943396 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				787B22F8241B701C00DDA9F3 /* Toast */,
 				7833B1E12412277D00943396 /* Util */,
 			);
 			path = Commons;
@@ -204,6 +241,27 @@
 				78784AFD2418BAF300695919 /* LayoutViewController.xib */,
 			);
 			path = "自动布局";
+			sourceTree = "<group>";
+		};
+		787B22F8241B701C00DDA9F3 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				787B22F9241B701C00DDA9F3 /* UIView+Toast.h */,
+				787B22FA241B701C00DDA9F3 /* UIView+Toast.m */,
+				787B22FC241B704300DDA9F3 /* UIViewController+Extern.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		787B2308241B966600DDA9F3 /* nav */ = {
+			isa = PBXGroup;
+			children = (
+				781A208D241A4CB00027DA17 /* FileNavigationController.swift */,
+				781A208E241A4CB00027DA17 /* FileNavigationController.xib */,
+				787B2306241B965C00DDA9F3 /* FileNavigationBar.swift */,
+				787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */,
+			);
+			path = nav;
 			sourceTree = "<group>";
 		};
 		78A95E3A241289AE0080812A /* Main */ = {
@@ -310,7 +368,10 @@
 				78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */,
 				781A2082241A42950027DA17 /* FilePreViewController.xib in Resources */,
 				7833B1D42412255800943396 /* Assets.xcassets in Resources */,
+				787B22F7241B696E00DDA9F3 /* FileTestTableViewCell.xib in Resources */,
+				787B2305241B75A500DDA9F3 /* FileDownloadViewController.xib in Resources */,
 				7833B1D22412255300943396 /* Main.storyboard in Resources */,
+				781A209C241B34CC0027DA17 /* FileTestViewController.xib in Resources */,
 				78A95E3E241289F60080812A /* MainViewController.xib in Resources */,
 				781A2088241A44ED0027DA17 /* test.pdf in Resources */,
 				781A2095241A52890027DA17 /* test.xlsx in Resources */,
@@ -384,15 +445,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787B22FB241B701C00DDA9F3 /* UIView+Toast.m in Sources */,
 				7833B1CF2412255300943396 /* ViewController.swift in Sources */,
 				7833B1CB2412255300943396 /* AppDelegate.swift in Sources */,
 				781A2081241A42950027DA17 /* FilePreViewController.swift in Sources */,
+				787B2304241B75A500DDA9F3 /* FileDownloadViewController.swift in Sources */,
+				787B2307241B965C00DDA9F3 /* FileNavigationBar.swift in Sources */,
+				787B22F6241B696E00DDA9F3 /* FileTestTableViewCell.swift in Sources */,
+				787B230A241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift in Sources */,
 				7833B1E5241233A000943396 /* log2.swift in Sources */,
 				78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */,
 				78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */,
+				781A209B241B34CC0027DA17 /* FileTestViewController.swift in Sources */,
 				781A2086241A430B0027DA17 /* DemoFile.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
 				781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */,
+				787B22FD241B704300DDA9F3 /* UIViewController+Extern.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */,
 				781A208F241A4CB00027DA17 /* FileNavigationController.swift in Sources */,
@@ -555,6 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftDemo/ExportOCHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -577,6 +646,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftDemo/ExportOCHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
