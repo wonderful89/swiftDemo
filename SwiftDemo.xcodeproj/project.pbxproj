@@ -43,6 +43,7 @@
 		78A95E4024128DC10080812A /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3F24128DC10080812A /* TestConfig.swift */; };
 		78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E41241298A20080812A /* MainViewController+UI.swift */; };
 		B3A1055AB1CC79262AC50B60 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DC8A6337703827647BC8FD /* Pods_SwiftDemo.framework */; };
+		E92F3FC62424E8E100E0D1A4 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FC52424E8E100E0D1A4 /* Dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		78A95E3C241289F60080812A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		78A95E3F24128DC10080812A /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		78A95E41241298A20080812A /* MainViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UI.swift"; sourceTree = "<group>"; };
+		E92F3FC52424E8E100E0D1A4 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		7833B1E02412277100943396 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				E92F3FC42424E8BF00E0D1A4 /* Base */,
 				787B22F8241B701C00DDA9F3 /* Toast */,
 				7833B1E12412277D00943396 /* Util */,
 			);
@@ -291,6 +294,14 @@
 				39DC8A6337703827647BC8FD /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E92F3FC42424E8BF00E0D1A4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E92F3FC52424E8E100E0D1A4 /* Dictionary.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		F246083388A399D9564B989A /* Pods */ = {
@@ -457,6 +468,7 @@
 				78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */,
 				78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */,
 				781A209B241B34CC0027DA17 /* FileTestViewController.swift in Sources */,
+				E92F3FC62424E8E100E0D1A4 /* Dictionary.swift in Sources */,
 				781A2086241A430B0027DA17 /* DemoFile.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
 				781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */,
