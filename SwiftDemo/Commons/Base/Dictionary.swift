@@ -14,7 +14,7 @@ extension Dictionary {
                                                             options: [.prettyPrinted]) else {
             return nil
         }
-        return String(data: theJSONData, encoding: .ascii)
+        return String(data: theJSONData, encoding: .utf8)
     }
     
     func printJson() {
@@ -32,21 +32,20 @@ extension Dictionary {
 //    }
 }
 
-extension Foo {
-  var dictionary: [String: Any]? {
-    guard let data = try? JSONEncoder().encode(self) else { return nil }
-    return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
-  }
-}
-
-struct Foo: Encodable{
-    var a: Int
-    var b: String
-}
-
-func test(){
-    let foo = Foo(a: 1, b: "key1")
-    let b2 = foo.dictionary
-    print("b2 = \(b2!.jsonString!)")
-}
-
+//extension Foo {
+//  var dictionary: [String: Any]? {
+//    guard let data = try? JSONEncoder().encode(self) else { return nil }
+//    return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+//  }
+//}
+//
+//struct Foo: Encodable{
+//    var a: Int
+//    var b: String
+//}
+//
+//func test(){
+//    let foo = Foo(a: 1, b: "key1")
+//    let b2 = foo.dictionary
+//    print("b2 = \(b2!.jsonString!)")
+//}

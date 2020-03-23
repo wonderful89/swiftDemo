@@ -57,23 +57,23 @@ extension NSNumber: _BuiltInBridgeType {
 }
 
 extension NSArray: _BuiltInBridgeType {
-
+    
     static func _transform(from object: Any) -> _BuiltInBridgeType? {
         return object as? NSArray
     }
 
     func _plainValue() -> Any? {
-        return (self as? [Any])?.plainValue()
+        return (self as? Array<Any>)?.plainValue()
     }
 }
 
 extension NSDictionary: _BuiltInBridgeType {
-
+    
     static func _transform(from object: Any) -> _BuiltInBridgeType? {
         return object as? NSDictionary
     }
 
     func _plainValue() -> Any? {
-        return (self as? [String: Any])?.plainValue()
+        return (self as? Dictionary<String, Any>)?.plainValue()
     }
 }

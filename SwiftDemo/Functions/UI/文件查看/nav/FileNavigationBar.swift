@@ -40,7 +40,7 @@ public class FileNavigationBar: UINavigationBar {
         addSubview(backgroundView)
     }
     @objc func navBackEvent(_ sender: Any) {
-        if let callback = navBack{
+        if let callback = navBack {
             callback(sender)
         }
     }

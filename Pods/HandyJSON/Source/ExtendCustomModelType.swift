@@ -22,7 +22,7 @@ extension _ExtendCustomModelType {
     public mutating func didFinishMapping() {}
 }
 
-private func convertKeyIfNeeded(dict: [String: Any]) -> [String: Any] {
+fileprivate func convertKeyIfNeeded(dict: [String: Any]) -> [String: Any] {
     if HandyJSONConfiguration.deserializeOptions.contains(.caseInsensitive) {
         var newDict = [String: Any]()
         dict.forEach({ (kvPair) in
@@ -34,7 +34,7 @@ private func convertKeyIfNeeded(dict: [String: Any]) -> [String: Any] {
     return dict
 }
 
-private func getRawValueFrom(dict: [String: Any], property: PropertyInfo, mapper: HelpingMapper) -> Any? {
+fileprivate func getRawValueFrom(dict: [String: Any], property: PropertyInfo, mapper: HelpingMapper) -> Any? {
     let address = Int(bitPattern: property.address)
     if let mappingHandler = mapper.getMappingHandler(key: address) {
         if let mappingPaths = mappingHandler.mappingPaths, mappingPaths.count > 0 {
@@ -52,7 +52,7 @@ private func getRawValueFrom(dict: [String: Any], property: PropertyInfo, mapper
     return dict[property.key]
 }
 
-private func convertValue(rawValue: Any, property: PropertyInfo, mapper: HelpingMapper) -> Any? {
+fileprivate func convertValue(rawValue: Any, property: PropertyInfo, mapper: HelpingMapper) -> Any? {
     if rawValue is NSNull { return nil }
     if let mappingHandler = mapper.getMappingHandler(key: Int(bitPattern: property.address)), let transformer = mappingHandler.assignmentClosure {
         return transformer(rawValue)
@@ -64,7 +64,7 @@ private func convertValue(rawValue: Any, property: PropertyInfo, mapper: Helping
     }
 }
 
-private func assignProperty(convertedValue: Any, instance: _ExtendCustomModelType, property: PropertyInfo) {
+fileprivate func assignProperty(convertedValue: Any, instance: _ExtendCustomModelType, property: PropertyInfo) {
     if property.bridged {
         (instance as! NSObject).setValue(convertedValue, forKey: property.key)
     } else {
@@ -72,7 +72,7 @@ private func assignProperty(convertedValue: Any, instance: _ExtendCustomModelTyp
     }
 }
 
-private func readAllChildrenFrom(mirror: Mirror) -> [(String, Any)] {
+fileprivate func readAllChildrenFrom(mirror: Mirror) -> [(String, Any)] {
     var children = [(label: String?, value: Any)]()
     let mirrorChildrenCollection = AnyRandomAccessCollection(mirror.children)!
     children += mirrorChildrenCollection
@@ -92,7 +92,7 @@ private func readAllChildrenFrom(mirror: Mirror) -> [(String, Any)] {
     return result
 }
 
-private func merge(children: [(String, Any)], propertyInfos: [PropertyInfo]) -> [String: (Any, PropertyInfo?)] {
+fileprivate func merge(children: [(String, Any)], propertyInfos: [PropertyInfo]) -> [String: (Any, PropertyInfo?)] {
     var infoDict = [String: PropertyInfo]()
     propertyInfos.forEach { (info) in
         infoDict[info.key] = info
@@ -274,3 +274,4 @@ extension _ExtendCustomModelType {
         return dict
     }
 }
+

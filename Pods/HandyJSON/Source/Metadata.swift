@@ -37,7 +37,7 @@ struct _class_ro_t {
 }
 
 // MARK: MetadataType
-protocol MetadataType: PointerType {
+protocol MetadataType : PointerType {
     static var kind: Metadata.Kind? { get }
 }
 
@@ -56,7 +56,7 @@ extension MetadataType {
 }
 
 // MARK: Metadata
-struct Metadata: MetadataType {
+struct Metadata : MetadataType {
     var pointer: UnsafePointer<Int>
 
     init(type: Any.Type) {
@@ -118,7 +118,7 @@ extension Metadata {
 
 // MARK: Metadata + Class
 extension Metadata {
-    struct Class: ContextDescriptorType {
+    struct Class : ContextDescriptorType {
 
         static let kind: Kind? = .class
         var pointer: UnsafePointer<_Metadata._Class>
@@ -177,15 +177,15 @@ extension Metadata {
         func _propertyDescriptionsAndStartPoint() -> ([Property.Description], Int32?)? {
             let instanceStart = pointer.pointee.class_rw_t()?.pointee.class_ro_t()?.pointee.instanceStart
             var result: [Property.Description] = []
-            if let fieldOffsets = self.fieldOffsets, let fieldRecords = self.reflectionFieldDescriptor?.fieldRecords {
+            if let fieldOffsets = self.fieldOffsets {
                 class NameAndType {
                     var name: String?
                     var type: Any.Type?
                 }
-
                 for i in 0..<self.numberOfFields {
-                    let name = fieldRecords[i].fieldName
-                    if let cMangledTypeName = fieldRecords[i].mangledTypeName,
+
+                    if let name = self.reflectionFieldDescriptor?.fieldRecords[i].fieldName,
+                        let cMangledTypeName = self.reflectionFieldDescriptor?.fieldRecords[i].mangledTypeName,
                         let fieldType = _getTypeByMangledNameInContext(cMangledTypeName, getMangledTypeNameSize(cMangledTypeName), genericContext: self.contextDescriptorPointer, genericArguments: self.genericArgumentVector) {
 
                         result.append(Property.Description(key: name, type: fieldType, offset: fieldOffsets[i]))
@@ -250,7 +250,7 @@ extension _Metadata {
 
 // MARK: Metadata + Struct
 extension Metadata {
-    struct Struct: ContextDescriptorType {
+    struct Struct : ContextDescriptorType {
         static let kind: Kind? = .struct
         var pointer: UnsafePointer<_Metadata._Struct>
         var contextDescriptorOffsetLocation: Int {
@@ -271,7 +271,7 @@ extension Metadata {
         }
 
         func propertyDescriptions() -> [Property.Description]? {
-            guard let fieldOffsets = self.fieldOffsets, let fieldRecords = self.reflectionFieldDescriptor?.fieldRecords else {
+            guard let fieldOffsets = self.fieldOffsets else {
                 return []
             }
             var result: [Property.Description] = []
@@ -280,8 +280,8 @@ extension Metadata {
                 var type: Any.Type?
             }
             for i in 0..<self.numberOfFields {
-                let name = fieldRecords[i].fieldName
-                if let cMangledTypeName = fieldRecords[i].mangledTypeName,
+                if let name = self.reflectionFieldDescriptor?.fieldRecords[i].fieldName,
+                    let cMangledTypeName = self.reflectionFieldDescriptor?.fieldRecords[i].mangledTypeName,
                     let fieldType = _getTypeByMangledNameInContext(cMangledTypeName, getMangledTypeNameSize(cMangledTypeName), genericContext: self.contextDescriptorPointer, genericArguments: self.genericArgumentVector) {
 
                     result.append(Property.Description(key: name, type: fieldType, offset: fieldOffsets[i]))

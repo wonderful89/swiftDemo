@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LayoutViewController" customModule="SwiftDemo" customModuleProvider="target">
             <connections>
+                <outlet property="bgView" destination="jPK-xN-qbm" id="HKd-RK-YMF"/>
+                <outlet property="switch1" destination="3d5-eH-F7g" id="G92-A3-Mcn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,32 +20,38 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pKw-a5-O5E">
-                    <rect key="frame" x="20" y="136" width="374" height="120"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGJ-pn-Dvf">
-                            <rect key="frame" x="0.0" y="0.0" width="156" height="120"/>
-                            <state key="normal" title="Button fasd"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgM-sR-BsI">
-                            <rect key="frame" x="166" y="0.0" width="89.5" height="120"/>
-                            <state key="normal" title="Button"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLS-y6-W2x">
-                            <rect key="frame" x="265.5" y="0.0" width="108.5" height="120"/>
-                            <state key="normal" title="Button"/>
-                        </button>
-                    </subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-eH-F7g">
+                    <rect key="frame" x="228" y="106" width="51" height="31"/>
+                    <connections>
+                        <action selector="switchChanged:" destination="-1" eventType="valueChanged" id="d7G-DB-6Jg"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="改变底部约束：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKk-q7-4mo">
+                    <rect key="frame" x="74" y="111" width="122" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="P7h-DQ-2Mo"/>
+                        <constraint firstAttribute="height" constant="21" id="axC-1d-P6y"/>
                     </constraints>
-                </stackView>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPK-xN-qbm">
+                    <rect key="frame" x="27.5" y="305.5" width="359" height="339"/>
+                    <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="359" id="GEa-Yp-enH"/>
+                        <constraint firstAttribute="height" constant="339" id="vJ3-Ik-Tly"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pKw-a5-O5E" secondAttribute="trailing" constant="20" id="MVm-xQ-k7A"/>
-                <constraint firstItem="pKw-a5-O5E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fSO-kJ-sjZ"/>
-                <constraint firstItem="pKw-a5-O5E" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="vrU-52-RiD"/>
+                <constraint firstItem="3d5-eH-F7g" firstAttribute="centerY" secondItem="XKk-q7-4mo" secondAttribute="centerY" id="0u0-9u-23t"/>
+                <constraint firstItem="XKk-q7-4mo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="23" id="AU1-T2-fvC"/>
+                <constraint firstItem="3d5-eH-F7g" firstAttribute="leading" secondItem="XKk-q7-4mo" secondAttribute="trailing" constant="32" id="JEr-Kz-33B"/>
+                <constraint firstItem="XKk-q7-4mo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="74" id="P6o-tQ-Tlf"/>
+                <constraint firstItem="jPK-xN-qbm" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="eCd-Nv-lvk"/>
+                <constraint firstItem="jPK-xN-qbm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="z6c-Tu-c9p"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

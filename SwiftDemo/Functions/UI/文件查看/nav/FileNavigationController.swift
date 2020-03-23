@@ -86,7 +86,7 @@ extension FileNavigationController_BarDelegate: UINavigationBarDelegate {
         if let topViewController = self.topViewController as? FileNavigationControllerProtocol {
             guard topViewController.fileNavigationBar(navigationBar, shouldPop: item) != false else {
                 // Prevent the back button from staying in an disabled state
-                for view in navigationBar.subviews where view.alpha < 1.0{
+                for view in navigationBar.subviews where view.alpha < 1.0 {
                     UIView.animate(withDuration: 0.25, animations: {
                         view.alpha = 1.0
                     })
@@ -95,7 +95,7 @@ extension FileNavigationController_BarDelegate: UINavigationBarDelegate {
             }
         }
 
-        for view in navigationBar.subviews where view.alpha < 1.0{
+        for view in navigationBar.subviews where view.alpha < 1.0 {
             UIView.animate(withDuration: 0.25, animations: {
                 view.alpha = 1.0
             })

@@ -69,7 +69,7 @@ extension DocQLPreviewController_Delegate: QLPreviewControllerDelegate, QLPrevie
     }
 
     internal func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-        if let path = filePath{
+        if let path = filePath {
             let url = URL(fileURLWithPath: path)
             return PreviewItem(itemURL: url, itemTitle: self.title)
         } else {
@@ -81,7 +81,7 @@ extension DocQLPreviewController_Delegate: QLPreviewControllerDelegate, QLPrevie
 }
 
 typealias DocQLPreviewController_Nav = DocQLPreviewController
-extension DocQLPreviewController_Nav: FileNavigationControllerProtocol{
+extension DocQLPreviewController_Nav: FileNavigationControllerProtocol {
     func fileNavigationBar(_ navigationBar: UINavigationBar, shouldPop item: UINavigationItem) -> Bool {
         self.dismiss(animated: true, completion: nil)
         return false

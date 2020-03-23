@@ -15,6 +15,10 @@ extension MainViewController_Logic {
         switch typeE {
         case .openFile:
             openFile()
+        case .parseJson:
+            let vc = ParseJsonViewController()
+            let nav = FileNavigationController(rootViewController: vc)
+            self.navigationController?.present(nav, animated: true, completion: nil)
         default:
             log.info("默认")
         }

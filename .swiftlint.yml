@@ -2,7 +2,7 @@ disabled_rules: # 执行时排除掉的规则
   - colon
   - comma
   - control_statement
-  - opening_brace # { 位置要不要放在下一行
+  # - opening_brace # { 位置要不要放在下一行
   - force_try
   - force_cast
   - switch_case_on_newline

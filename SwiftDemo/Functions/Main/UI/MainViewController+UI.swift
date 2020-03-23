@@ -12,5 +12,19 @@ private typealias MainViewControllerUI = MainViewController
 extension MainViewControllerUI {
     func handleUI(type: String) {
         log.info("handleUI: \(type)")
+        let typeA = TestConfig.UI(rawValue: type)
+        switch typeA {
+        case .autoLayout:
+            autoLayoutTest()
+        default:
+            log.info("其他")
+        }
+    }
+    
+    func autoLayoutTest() {
+        log.info("autoLayoutTest")
+        let vc = LayoutViewController()
+        let nav = UINavigationController(rootViewController: vc)
+        self.present(nav, animated: true, completion: nil)
     }
 }

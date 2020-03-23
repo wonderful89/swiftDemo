@@ -38,6 +38,8 @@
 		787B2305241B75A500DDA9F3 /* FileDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 787B2303241B75A500DDA9F3 /* FileDownloadViewController.xib */; };
 		787B2307241B965C00DDA9F3 /* FileNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B2306241B965C00DDA9F3 /* FileNavigationBar.swift */; };
 		787B230A241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */; };
+		78819D812428B27B00E37459 /* ParseJsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78819D7F2428B27B00E37459 /* ParseJsonViewController.swift */; };
+		78819D822428B27B00E37459 /* ParseJsonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78819D802428B27B00E37459 /* ParseJsonViewController.xib */; };
 		78A95E3D241289F60080812A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3B241289F60080812A /* MainViewController.swift */; };
 		78A95E3E241289F60080812A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A95E3C241289F60080812A /* MainViewController.xib */; };
 		78A95E4024128DC10080812A /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3F24128DC10080812A /* TestConfig.swift */; };
@@ -85,6 +87,8 @@
 		787B2303241B75A500DDA9F3 /* FileDownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileDownloadViewController.xib; sourceTree = "<group>"; };
 		787B2306241B965C00DDA9F3 /* FileNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationBar.swift; sourceTree = "<group>"; };
 		787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationControllerProtocol.swift; sourceTree = "<group>"; };
+		78819D7F2428B27B00E37459 /* ParseJsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJsonViewController.swift; sourceTree = "<group>"; };
+		78819D802428B27B00E37459 /* ParseJsonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParseJsonViewController.xib; sourceTree = "<group>"; };
 		78A95E3B241289F60080812A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		78A95E3C241289F60080812A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		78A95E3F24128DC10080812A /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 		78784AF92418BAC000695919 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				78819D7E2428B0ED00E37459 /* 解析JSON */,
 				781A207E241A420F0027DA17 /* 文件查看 */,
 				78784AFB2418BAD300695919 /* 自动布局 */,
 			);
@@ -265,6 +270,15 @@
 				787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */,
 			);
 			path = nav;
+			sourceTree = "<group>";
+		};
+		78819D7E2428B0ED00E37459 /* 解析JSON */ = {
+			isa = PBXGroup;
+			children = (
+				78819D7F2428B27B00E37459 /* ParseJsonViewController.swift */,
+				78819D802428B27B00E37459 /* ParseJsonViewController.xib */,
+			);
+			path = "解析JSON";
 			sourceTree = "<group>";
 		};
 		78A95E3A241289AE0080812A /* Main */ = {
@@ -382,6 +396,7 @@
 				787B22F7241B696E00DDA9F3 /* FileTestTableViewCell.xib in Resources */,
 				787B2305241B75A500DDA9F3 /* FileDownloadViewController.xib in Resources */,
 				7833B1D22412255300943396 /* Main.storyboard in Resources */,
+				78819D822428B27B00E37459 /* ParseJsonViewController.xib in Resources */,
 				781A209C241B34CC0027DA17 /* FileTestViewController.xib in Resources */,
 				78A95E3E241289F60080812A /* MainViewController.xib in Resources */,
 				781A2088241A44ED0027DA17 /* test.pdf in Resources */,
@@ -425,7 +440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"in inner script, 当前目录：\"\necho `pwd`\n#echo \"转到工程目录：$PRODUCT_NAME\"\n#cd $PRODUCT_NAME\nif which swiftlint >/dev/null; then\n  echo \"工程目录$PRODUCT_NAME 进行自动格式化\"\n  swiftlint\n  #swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit\n";
+			shellScript = "echo \"in inner script, 当前目录：\"\necho `pwd`\n#echo \"转到工程目录：$PRODUCT_NAME\"\n#cd $PRODUCT_NAME\nif which swiftlint2 >/dev/null; then\n  echo \"工程目录$PRODUCT_NAME 进行自动格式化\"\n  swiftlint\n  #swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit\n";
 		};
 		F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -476,6 +491,7 @@
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */,
 				781A208F241A4CB00027DA17 /* FileNavigationController.swift in Sources */,
+				78819D812428B27B00E37459 /* ParseJsonViewController.swift in Sources */,
 				7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */,
 				78A95E4024128DC10080812A /* TestConfig.swift in Sources */,
 				781A2097241A544B0027DA17 /* FileConfigStyle.swift in Sources */,

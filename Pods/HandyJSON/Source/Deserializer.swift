@@ -160,7 +160,7 @@ public class JSONDeserializer<T: HandyJSON> {
     }
 }
 
-private func getInnerObject(inside object: Any?, by designatedPath: String?) -> Any? {
+fileprivate func getInnerObject(inside object: Any?, by designatedPath: String?) -> Any? {
     var result: Any? = object
     var abort = false
     if let paths = designatedPath?.components(separatedBy: "."), paths.count > 0 {

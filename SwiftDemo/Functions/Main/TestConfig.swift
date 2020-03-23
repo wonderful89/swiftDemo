@@ -41,11 +41,11 @@ enum TestConfig: String, CaseIterable {
     }
 
     enum UI: String, CaseIterable {
-        case aaa, bbb, ccc
+        case autoLayout, bbb, ccc
     }
 
     enum Logic: String, CaseIterable {
-        case openFile, bbb33, ccc
+        case openFile, parseJson, ccc
     }
 
     enum Animation: String, CaseIterable {

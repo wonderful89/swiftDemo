@@ -42,7 +42,7 @@ class FilePreViewController: UIViewController {
         } else {
             let fielManager = FileManager.default
             let filePath = NSHomeDirectory() + "/Documents/download/test.pdf"
-            if (fielManager.fileExists(atPath: filePath)){
+            if (fielManager.fileExists(atPath: filePath)) {
                 log.info("文件已经存在，先删除")
                 try? fielManager.removeItem(atPath: filePath)
             }
@@ -53,7 +53,7 @@ class FilePreViewController: UIViewController {
     }
 }
 
-extension FilePreViewController: FileDownloadViewControllerDelegate{
+extension FilePreViewController: FileDownloadViewControllerDelegate {
     func finishDownload(_ path: String?) {
         self.file.filePath = path
         self.file.isLocal = true
