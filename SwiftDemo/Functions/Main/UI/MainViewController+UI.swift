@@ -16,6 +16,11 @@ extension MainViewControllerUI {
         switch typeA {
         case .autoLayout:
             autoLayoutTest()
+        case .dnzEmpty:
+            let tabNav = DZNTabBarViewController()
+//            let nav = UINavigationController(rootViewController: tabNav)
+//            self.present(nav, animated: true, completion: nil)
+            navigationController?.pushViewController(tabNav, animated: true)
         default:
             log.info("其他")
         }

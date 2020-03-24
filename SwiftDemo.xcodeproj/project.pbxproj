@@ -46,6 +46,15 @@
 		78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E41241298A20080812A /* MainViewController+UI.swift */; };
 		B3A1055AB1CC79262AC50B60 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DC8A6337703827647BC8FD /* Pods_SwiftDemo.framework */; };
 		E92F3FC62424E8E100E0D1A4 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FC52424E8E100E0D1A4 /* Dictionary.swift */; };
+		E92F3FCC242A06AD00E0D1A4 /* DZNEmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FCA242A06AD00E0D1A4 /* DZNEmptyViewController.swift */; };
+		E92F3FCD242A06AD00E0D1A4 /* DZNEmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FCB242A06AD00E0D1A4 /* DZNEmptyViewController.xib */; };
+		E92F3FD0242A20A200E0D1A4 /* DZNTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FCE242A20A200E0D1A4 /* DZNTabBarViewController.swift */; };
+		E92F3FD1242A20A200E0D1A4 /* DZNTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FCF242A20A200E0D1A4 /* DZNTabBarViewController.xib */; };
+		E92F3FD4242A224100E0D1A4 /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FD2242A224100E0D1A4 /* MessageListViewController.swift */; };
+		E92F3FD5242A224100E0D1A4 /* MessageListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FD3242A224100E0D1A4 /* MessageListViewController.xib */; };
+		E92F3FD7242A258600E0D1A4 /* DZTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FD6242A258600E0D1A4 /* DZTableView.swift */; };
+		E92F3FDA242A2B2E00E0D1A4 /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */; };
+		E92F3FDB242A2B2E00E0D1A4 /* RefreshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +103,15 @@
 		78A95E3F24128DC10080812A /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		78A95E41241298A20080812A /* MainViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UI.swift"; sourceTree = "<group>"; };
 		E92F3FC52424E8E100E0D1A4 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		E92F3FCA242A06AD00E0D1A4 /* DZNEmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZNEmptyViewController.swift; sourceTree = "<group>"; };
+		E92F3FCB242A06AD00E0D1A4 /* DZNEmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZNEmptyViewController.xib; sourceTree = "<group>"; };
+		E92F3FCE242A20A200E0D1A4 /* DZNTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZNTabBarViewController.swift; sourceTree = "<group>"; };
+		E92F3FCF242A20A200E0D1A4 /* DZNTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZNTabBarViewController.xib; sourceTree = "<group>"; };
+		E92F3FD2242A224100E0D1A4 /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		E92F3FD3242A224100E0D1A4 /* MessageListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageListViewController.xib; sourceTree = "<group>"; };
+		E92F3FD6242A258600E0D1A4 /* DZTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZTableView.swift; sourceTree = "<group>"; };
+		E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
+		E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +253,7 @@
 		78784AF92418BAC000695919 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E92F3FC9242A067F00E0D1A4 /* DZNEmptyDataSet */,
 				78819D7E2428B0ED00E37459 /* 解析JSON */,
 				781A207E241A420F0027DA17 /* 文件查看 */,
 				78784AFB2418BAD300695919 /* 自动布局 */,
@@ -318,6 +337,22 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		E92F3FC9242A067F00E0D1A4 /* DZNEmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */,
+				E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */,
+				E92F3FCA242A06AD00E0D1A4 /* DZNEmptyViewController.swift */,
+				E92F3FCB242A06AD00E0D1A4 /* DZNEmptyViewController.xib */,
+				E92F3FCE242A20A200E0D1A4 /* DZNTabBarViewController.swift */,
+				E92F3FCF242A20A200E0D1A4 /* DZNTabBarViewController.xib */,
+				E92F3FD2242A224100E0D1A4 /* MessageListViewController.swift */,
+				E92F3FD3242A224100E0D1A4 /* MessageListViewController.xib */,
+				E92F3FD6242A258600E0D1A4 /* DZTableView.swift */,
+			);
+			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
 		F246083388A399D9564B989A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,12 +426,16 @@
 				7833B1D72412255800943396 /* LaunchScreen.storyboard in Resources */,
 				781A2090241A4CB00027DA17 /* FileNavigationController.xib in Resources */,
 				78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */,
+				E92F3FD1242A20A200E0D1A4 /* DZNTabBarViewController.xib in Resources */,
+				E92F3FD5242A224100E0D1A4 /* MessageListViewController.xib in Resources */,
 				781A2082241A42950027DA17 /* FilePreViewController.xib in Resources */,
+				E92F3FDB242A2B2E00E0D1A4 /* RefreshViewController.xib in Resources */,
 				7833B1D42412255800943396 /* Assets.xcassets in Resources */,
 				787B22F7241B696E00DDA9F3 /* FileTestTableViewCell.xib in Resources */,
 				787B2305241B75A500DDA9F3 /* FileDownloadViewController.xib in Resources */,
 				7833B1D22412255300943396 /* Main.storyboard in Resources */,
 				78819D822428B27B00E37459 /* ParseJsonViewController.xib in Resources */,
+				E92F3FCD242A06AD00E0D1A4 /* DZNEmptyViewController.xib in Resources */,
 				781A209C241B34CC0027DA17 /* FileTestViewController.xib in Resources */,
 				78A95E3E241289F60080812A /* MainViewController.xib in Resources */,
 				781A2088241A44ED0027DA17 /* test.pdf in Resources */,
@@ -484,16 +523,21 @@
 				78784AFE2418BAF300695919 /* LayoutViewController.swift in Sources */,
 				781A209B241B34CC0027DA17 /* FileTestViewController.swift in Sources */,
 				E92F3FC62424E8E100E0D1A4 /* Dictionary.swift in Sources */,
+				E92F3FD7242A258600E0D1A4 /* DZTableView.swift in Sources */,
 				781A2086241A430B0027DA17 /* DemoFile.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
 				781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */,
+				E92F3FD4242A224100E0D1A4 /* MessageListViewController.swift in Sources */,
 				787B22FD241B704300DDA9F3 /* UIViewController+Extern.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */,
 				781A208F241A4CB00027DA17 /* FileNavigationController.swift in Sources */,
 				78819D812428B27B00E37459 /* ParseJsonViewController.swift in Sources */,
+				E92F3FD0242A20A200E0D1A4 /* DZNTabBarViewController.swift in Sources */,
 				7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */,
+				E92F3FDA242A2B2E00E0D1A4 /* RefreshViewController.swift in Sources */,
 				78A95E4024128DC10080812A /* TestConfig.swift in Sources */,
+				E92F3FCC242A06AD00E0D1A4 /* DZNEmptyViewController.swift in Sources */,
 				781A2097241A544B0027DA17 /* FileConfigStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

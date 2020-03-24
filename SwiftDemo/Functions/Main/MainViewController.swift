@@ -54,6 +54,7 @@ extension MainViewControllerTableView: UITableViewDelegate, UITableViewDataSourc
     func initTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView() //
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
