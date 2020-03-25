@@ -40,6 +40,8 @@
 		787B230A241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */; };
 		78819D812428B27B00E37459 /* ParseJsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78819D7F2428B27B00E37459 /* ParseJsonViewController.swift */; };
 		78819D822428B27B00E37459 /* ParseJsonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78819D802428B27B00E37459 /* ParseJsonViewController.xib */; };
+		78819D84242AFE7500E37459 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78819D83242AFE7500E37459 /* UserInfo.swift */; };
+		78819D86242B022A00E37459 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78819D85242B022A00E37459 /* Employee.swift */; };
 		78A95E3D241289F60080812A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3B241289F60080812A /* MainViewController.swift */; };
 		78A95E3E241289F60080812A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A95E3C241289F60080812A /* MainViewController.xib */; };
 		78A95E4024128DC10080812A /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A95E3F24128DC10080812A /* TestConfig.swift */; };
@@ -98,6 +100,8 @@
 		787B2309241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNavigationControllerProtocol.swift; sourceTree = "<group>"; };
 		78819D7F2428B27B00E37459 /* ParseJsonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJsonViewController.swift; sourceTree = "<group>"; };
 		78819D802428B27B00E37459 /* ParseJsonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParseJsonViewController.xib; sourceTree = "<group>"; };
+		78819D83242AFE7500E37459 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		78819D85242B022A00E37459 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		78A95E3B241289F60080812A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		78A95E3C241289F60080812A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		78A95E3F24128DC10080812A /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 			children = (
 				78819D7F2428B27B00E37459 /* ParseJsonViewController.swift */,
 				78819D802428B27B00E37459 /* ParseJsonViewController.xib */,
+				78819D83242AFE7500E37459 /* UserInfo.swift */,
+				78819D85242B022A00E37459 /* Employee.swift */,
 			);
 			path = "解析JSON";
 			sourceTree = "<group>";
@@ -517,6 +523,7 @@
 				787B2304241B75A500DDA9F3 /* FileDownloadViewController.swift in Sources */,
 				787B2307241B965C00DDA9F3 /* FileNavigationBar.swift in Sources */,
 				787B22F6241B696E00DDA9F3 /* FileTestTableViewCell.swift in Sources */,
+				78819D86242B022A00E37459 /* Employee.swift in Sources */,
 				787B230A241B9E5000DDA9F3 /* FileNavigationControllerProtocol.swift in Sources */,
 				7833B1E5241233A000943396 /* log2.swift in Sources */,
 				78A95E42241298A20080812A /* MainViewController+UI.swift in Sources */,
@@ -538,6 +545,7 @@
 				E92F3FDA242A2B2E00E0D1A4 /* RefreshViewController.swift in Sources */,
 				78A95E4024128DC10080812A /* TestConfig.swift in Sources */,
 				E92F3FCC242A06AD00E0D1A4 /* DZNEmptyViewController.swift in Sources */,
+				78819D84242AFE7500E37459 /* UserInfo.swift in Sources */,
 				781A2097241A544B0027DA17 /* FileConfigStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
