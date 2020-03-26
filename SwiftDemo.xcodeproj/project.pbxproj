@@ -57,6 +57,7 @@
 		E92F3FD7242A258600E0D1A4 /* DZTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FD6242A258600E0D1A4 /* DZTableView.swift */; };
 		E92F3FDA242A2B2E00E0D1A4 /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */; };
 		E92F3FDB242A2B2E00E0D1A4 /* RefreshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */; };
+		E92F3FDD242C5F2500E0D1A4 /* test.docx in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FDC242C5F2500E0D1A4 /* test.docx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		E92F3FD6242A258600E0D1A4 /* DZTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZTableView.swift; sourceTree = "<group>"; };
 		E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
 		E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshViewController.xib; sourceTree = "<group>"; };
+		E92F3FDC242C5F2500E0D1A4 /* test.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.docx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		781A2091241A51B30027DA17 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E92F3FDC242C5F2500E0D1A4 /* test.docx */,
 				781A2087241A44ED0027DA17 /* test.pdf */,
 				781A2093241A520A0027DA17 /* test.dart */,
 				781A2092241A51F40027DA17 /* test.xlsx */,
@@ -432,6 +435,7 @@
 				7833B1D72412255800943396 /* LaunchScreen.storyboard in Resources */,
 				781A2090241A4CB00027DA17 /* FileNavigationController.xib in Resources */,
 				78784AFF2418BAF300695919 /* LayoutViewController.xib in Resources */,
+				E92F3FDD242C5F2500E0D1A4 /* test.docx in Resources */,
 				E92F3FD1242A20A200E0D1A4 /* DZNTabBarViewController.xib in Resources */,
 				E92F3FD5242A224100E0D1A4 /* MessageListViewController.xib in Resources */,
 				781A2082241A42950027DA17 /* FilePreViewController.xib in Resources */,

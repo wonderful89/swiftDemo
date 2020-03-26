@@ -9,7 +9,7 @@
 import UIKit
 
 enum FileTestItems: CaseIterable {
-    case localPdf, network, networkBig, png, localExcel, localSvg, localppt, localDart
+    case localPdf, network, networkBig, png, localExcel, localSvg, localppt, localDart, localdocx
 }
 
 class FileTestViewController: UIViewController {
@@ -64,11 +64,16 @@ extension FileTestViewController_TableView: UITableViewDelegate, UITableViewData
             let vc = FilePreViewController(fileT: DemoFile(fileType: .excel, isLocal: true, filePath: filePath))
             let nav = FileNavigationController(rootViewController: vc)
             navigationController?.present(nav, animated: true, completion: nil)
+        case .localdocx:
+            let filePath = Bundle.main.path(forResource: "test", ofType: "docx")
+            let vc = FilePreViewController(fileT: DemoFile(fileType: .excel, isLocal: true, filePath: filePath))
+            let nav = FileNavigationController(rootViewController: vc)
+            navigationController?.present(nav, animated: true, completion: nil)
         case .network:
             let url = """
             https://wkbjcloudbos.bdimg.com/v1/wenku354//d8767f6deb03a5f14734dc15ddec76c4?responseContentDisposition=attachment%3B%20filename%3D%22%25E5%2584%25BF%25E7%25AB%25A5%25E6%2595%2585%25E4%25BA%258B.pdf.pdf%22%3B%20filename%2A%3Dutf-8%27%27%25E5%2584%25BF%25E7%25AB%25A5%25E6%2595%2585%25E4%25BA%258B.pdf.pdf&responseContentType=application%2Foctet-stream&responseCacheControl=no-cache&authorization=bce-auth-v1%2Ffa1126e91489401fa7cc85045ce7179e%2F2020-03-13T09%3A15%3A51Z%2F3000%2Fhost%2F793924f359185a444da438d126cead2f9a2610bef5a7ef05fdb1fe0046cf0b9a&token=eyJ0eXAiOiJKSVQiLCJ2ZXIiOiIxLjAiLCJhbGciOiJIUzI1NiIsImV4cCI6MTU4NDA5Mzk1MSwidXJpIjp0cnVlLCJwYXJhbXMiOlsicmVzcG9uc2VDb250ZW50RGlzcG9zaXRpb24iLCJyZXNwb25zZUNvbnRlbnRUeXBlIiwicmVzcG9uc2VDYWNoZUNvbnRyb2wiXX0%3D.6lqVJPkt1HMCdgz55EF%2Bk%2B964ySS42SLrYeIVGBPeLY%3D.1584093951
             """
-            
+
             let vc = FilePreViewController(fileT: DemoFile(fileType: .pdf, isLocal: false, url: url))
             let nav = FileNavigationController(rootViewController: vc)
             navigationController?.present(nav, animated: true, completion: nil)

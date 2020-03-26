@@ -7,7 +7,10 @@ extension Dictionary {
             return nil
         }
 
-        return String(data: theJSONData, encoding: .ascii)
+        let str = String(data: theJSONData, encoding: .utf8)
+//        [jsonString stringByReplacingOccurrencesOfString:@"\\" withString:@""];
+        let policyStr = str!.replacingOccurrences(of: "\\", with: "")
+        return policyStr
     }
 }
 
@@ -28,24 +31,17 @@ print("b2 = \(b)")
 let now = Date()
 print("date = \(now)")
 
-let dic2 = ["3-1": 111, "3-2": 222]
-let dic:[String: Any] = ["2": "B", "1": "A", "3": dic2]
+let dic2:[String :Any] = ["aaaa": "http://baidu.com/afa/fds/test.png", "3-2": 222]
+//let dic:[String: Any] = ["2": "B", "1": "A", "3": dic2]
 
-extension Foo {
-  var dictionary: [String: Any]? {
-    guard let data = try? JSONEncoder().encode(self) else { return nil }
-    return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
-  }
+print("dic2 = \(dic2.jsonStringRepresentation!)")
+
+guard let url1 = dic2["aaaa"]  else {
+    print("else....")
+    exit(0)
 }
 
-struct Foo: Encodable{
-    var a: Int
-    var b: String
-}
-
-let foo = Foo(a: 1, b: "key1")
-let b2 = foo.dictionary
-print("b2 = \(b2!.jsonStringRepresentation!)")
+print("url1 = \(url1)")
 
 //print(dic.jsonStringRepresentation!)
 //let encoder = JSONEncoder()

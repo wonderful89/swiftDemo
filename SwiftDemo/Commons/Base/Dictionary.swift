@@ -10,11 +10,23 @@ import Foundation
 
 extension Dictionary {
     var jsonString: String? {
+        var options: JSONSerialization.WritingOptions = [.fragmentsAllowed, .prettyPrinted]
+        if #available(iOS 13.0, *) {
+            options = [.fragmentsAllowed, .prettyPrinted, .withoutEscapingSlashes]
+        } else {
+            // Fallback on earlier versions
+        }
         guard let theJSONData = try? JSONSerialization.data(withJSONObject: self,
-                                                            options: [.prettyPrinted]) else {
+                                                            options: options) else {
             return nil
         }
-        return String(data: theJSONData, encoding: .utf8)
+        var str = String(data: theJSONData, encoding: .utf8)
+        if #available(iOS 13.0, *) {
+            
+        } else {
+            str = str?.replacingOccurrences(of: "\\", with: "")
+        }
+        return str
     }
     
     func printJson() {
