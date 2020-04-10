@@ -5,22 +5,36 @@
 //  Created by qianzhao on 2020/3/6.
 //  Copyright © 2020 qianzhao. All rights reserved.
 //
-
 import UIKit
+#if USE_SWIFT_MODULE
+    import Flutter
+    import FlutterPluginRegistrant
+#endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    #if USE_SWIFT_MODULE
+        var flutterEngine: FlutterEngine?
+    #endif
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         initLog()
+        initFlutterEngine()
         log.info("didFinishLaunchingWithOptions")
         if #available(iOS 13, *) {
-
         } else {
             AppDelegate.configWindow(window: window)
         }
         return true
+    }
+
+    fileprivate func initFlutterEngine() {
+        #if USE_SWIFT_MODULE
+            flutterEngine = FlutterEngine(name: "")
+            flutterEngine?.run()
+            GeneratedPluginRegistrant.register(with: flutterEngine!)
+        #endif
     }
 
     @available(iOS 13.0, *)

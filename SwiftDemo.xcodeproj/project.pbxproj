@@ -379,7 +379,9 @@
 			buildConfigurationList = 7833B1DB2412255800943396 /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
 			buildPhases = (
 				F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */,
+				78C437B424406F0600869208 /* ShellScript */,
 				787ED7462419364D007D7E75 /* ShellScript */,
+				3489859C0DEA0094DAABD789 /* [CP-User] Run Flutter Build Script */,
 				7833B1C32412255200943396 /* Sources */,
 				7833B1C42412255200943396 /* Frameworks */,
 				7833B1C52412255200943396 /* Resources */,
@@ -457,6 +459,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3489859C0DEA0094DAABD789 /* [CP-User] Run Flutter Build Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/./flutter_module/.metadata",
+				"${SRCROOT}/flutter_module/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/flutter_module/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 		3D92D8511C491F5CE6AE7E93 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +508,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "echo \"in inner script, 当前目录：\"\necho `pwd`\n#echo \"转到工程目录：$PRODUCT_NAME\"\n#cd $PRODUCT_NAME\nif which swiftlint2 >/dev/null; then\n  echo \"工程目录$PRODUCT_NAME 进行自动格式化\"\n  swiftlint\n  #swiftlint autocorrect\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\nexit\n";
+		};
+		78C437B424406F0600869208 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"11111\"\n#FLUTTER_ROOT=`which flutter`\n#echo $FLUTTER_ROOT\n#echo \"22222\"\n#cd $FLUTTER_ROOT\n#cd \"/Users/qianzhao/work/flutter/\"\n#FLUTTER_ROOT=\"/Users/qianzhao/work/flutter/\"\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n#\"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed\n";
 		};
 		F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -704,6 +739,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DUSE_SWIFT_MODULE2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -727,6 +763,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -DUSE_SWIFT_MODULE2";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianzhao.test.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
