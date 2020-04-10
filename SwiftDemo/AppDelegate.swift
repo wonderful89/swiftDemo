@@ -15,7 +15,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     #if USE_SWIFT_MODULE
-        var flutterEngine: FlutterEngine?
+        public var flutterEngine: FlutterEngine?
     #endif
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

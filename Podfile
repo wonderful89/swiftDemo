@@ -10,7 +10,8 @@ load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 target 'SwiftDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   
-  install_all_flutter_pods(flutter_application_path)
+  #install_all_flutter_pods(flutter_application_path)
+  pod 'flutter_app_module', :path => './flutterFrameworks'
 
   # Pods for SwiftDemo
   pod 'SwiftyBeaver'

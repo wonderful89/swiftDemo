@@ -7,6 +7,10 @@
 //
 
 import Foundation
+#if USE_SWIFT_MODULE
+    import Flutter
+    import FlutterPluginRegistrant
+#endif
 
 private typealias MainViewControllerUI = MainViewController
 extension MainViewControllerUI {
@@ -21,15 +25,22 @@ extension MainViewControllerUI {
 //            let nav = UINavigationController(rootViewController: tabNav)
 //            self.present(nav, animated: true, completion: nil)
             navigationController?.pushViewController(tabNav, animated: true)
+        case .flutterEntry:
+            #if USE_SWIFT_MODULE
+                let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
+                let flutterViewController =
+                    FlutterViewController(engine: flutterEngine!, nibName: nil, bundle: nil)
+                present(flutterViewController, animated: true, completion: nil)
+            #endif
         default:
             log.info("其他")
         }
     }
-    
+
     func autoLayoutTest() {
         log.info("autoLayoutTest")
         let vc = LayoutViewController()
         let nav = UINavigationController(rootViewController: vc)
-        self.present(nav, animated: true, completion: nil)
+        present(nav, animated: true, completion: nil)
     }
 }

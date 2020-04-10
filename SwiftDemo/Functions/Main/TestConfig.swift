@@ -41,7 +41,7 @@ enum TestConfig: String, CaseIterable {
     }
 
     enum UI: String, CaseIterable {
-        case autoLayout, dnzEmpty, ccc
+        case autoLayout, dnzEmpty, flutterEntry ,ccc
     }
 
     enum Logic: String, CaseIterable {
