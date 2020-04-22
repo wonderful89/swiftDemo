@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             flutterEngine = FlutterEngine(name: "")
             flutterEngine?.run()
             GeneratedPluginRegistrant.register(with: flutterEngine!)
+        
+            SwiftCommonAppPlugin.register(with: flutterEngine!.registrar(forPlugin: "myplugin/method"));
         #endif
     }
 

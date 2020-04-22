@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7800B10324503CD6008CEF1C /* CommonFlutterPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7800B10224503CD6008CEF1C /* CommonFlutterPlugin.swift */; };
 		781A2081241A42950027DA17 /* FilePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A207F241A42950027DA17 /* FilePreViewController.swift */; };
 		781A2082241A42950027DA17 /* FilePreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 781A2080241A42950027DA17 /* FilePreViewController.xib */; };
 		781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781A2083241A42BF0027DA17 /* DocQLPreviewController.swift */; };
@@ -64,6 +65,7 @@
 		39DC8A6337703827647BC8FD /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5576A87778F9A7626CAC65DA /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5AB23C81D5D27EA6596E7294 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7800B10224503CD6008CEF1C /* CommonFlutterPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFlutterPlugin.swift; sourceTree = "<group>"; };
 		781A207F241A42950027DA17 /* FilePreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePreViewController.swift; sourceTree = "<group>"; };
 		781A2080241A42950027DA17 /* FilePreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilePreViewController.xib; sourceTree = "<group>"; };
 		781A2083241A42BF0027DA17 /* DocQLPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocQLPreviewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				7833B1DF2412275F00943396 /* Functions */,
 				7833B1DE2412275100943396 /* Components */,
 				7833B1CA2412255300943396 /* AppDelegate.swift */,
+				7800B10224503CD6008CEF1C /* CommonFlutterPlugin.swift */,
 				787B2301241B715D00DDA9F3 /* ExportOCHeader.h */,
 				7833B1CC2412255300943396 /* SceneDelegate.swift */,
 				7833B1CE2412255300943396 /* ViewController.swift */,
@@ -556,6 +559,7 @@
 				781A2086241A430B0027DA17 /* DemoFile.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
 				781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */,
+				7800B10324503CD6008CEF1C /* CommonFlutterPlugin.swift in Sources */,
 				E92F3FD4242A224100E0D1A4 /* MessageListViewController.swift in Sources */,
 				787B22FD241B704300DDA9F3 /* UIViewController+Extern.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
