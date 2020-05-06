@@ -59,6 +59,7 @@
 		E92F3FDA242A2B2E00E0D1A4 /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */; };
 		E92F3FDB242A2B2E00E0D1A4 /* RefreshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */; };
 		E92F3FDD242C5F2500E0D1A4 /* test.docx in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FDC242C5F2500E0D1A4 /* test.docx */; };
+		E9EF17BE24629F62001F2DB5 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EF17BD24629F62001F2DB5 /* UINavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		E92F3FD8242A2B2E00E0D1A4 /* RefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
 		E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshViewController.xib; sourceTree = "<group>"; };
 		E92F3FDC242C5F2500E0D1A4 /* test.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.docx; sourceTree = "<group>"; };
+		E9EF17BD24629F62001F2DB5 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				E92F3FC52424E8E100E0D1A4 /* Dictionary.swift */,
+				E9EF17BD24629F62001F2DB5 /* UINavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				F75ED7BCCFA0863857AF9580 /* [CP] Check Pods Manifest.lock */,
 				78C437B424406F0600869208 /* ShellScript */,
 				787ED7462419364D007D7E75 /* ShellScript */,
+				5DCD9907532237199B5F7035 /* [CP-User] Run Flutter Build Script */,
 				7833B1C32412255200943396 /* Sources */,
 				7833B1C42412255200943396 /* Frameworks */,
 				7833B1C52412255200943396 /* Resources */,
@@ -478,6 +482,22 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5DCD9907532237199B5F7035 /* [CP-User] Run Flutter Build Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/./flutter_module/.metadata",
+				"${SRCROOT}/flutter_module/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/flutter_module/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/flutter_module/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 		787ED7462419364D007D7E75 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -565,6 +585,7 @@
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */,
 				781A208F241A4CB00027DA17 /* FileNavigationController.swift in Sources */,
+				E9EF17BE24629F62001F2DB5 /* UINavigationController.swift in Sources */,
 				78819D812428B27B00E37459 /* ParseJsonViewController.swift in Sources */,
 				E92F3FD0242A20A200E0D1A4 /* DZNTabBarViewController.swift in Sources */,
 				7833B1CD2412255300943396 /* SceneDelegate.swift in Sources */,

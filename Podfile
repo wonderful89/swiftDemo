@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '9.0'
 use_frameworks!
 
 # 支持flutter 模块
@@ -10,8 +10,8 @@ load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 target 'SwiftDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   
-  #install_all_flutter_pods(flutter_application_path)
-  pod 'flutter_app_module', :path => './flutterFrameworks'
+  install_all_flutter_pods(flutter_application_path)
+  #pod 'flutter_app_module', :path => './flutterFrameworks'
 
   # Pods for SwiftDemo
   pod 'SwiftyBeaver'

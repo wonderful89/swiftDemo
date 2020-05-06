@@ -40,7 +40,8 @@ extension MainViewControllerUI {
     func autoLayoutTest() {
         log.info("autoLayoutTest")
         let vc = LayoutViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        present(nav, animated: true, completion: nil)
+//        let nav = UINavigationController(rootViewController: vc)
+//        present(nav, animated: true, completion: nil)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

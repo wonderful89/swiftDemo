@@ -1,18 +1,34 @@
 PODS:
   - DZNEmptyDataSet (1.8.1)
-  - flutter_app_module (0.0.3)
+  - Flutter (1.0.0)
+  - flutter_module (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - shared_preferences
   - HandyJSON (5.0.0-beta.1)
   - Log (2.0)
-  - MJRefresh (3.3.1)
+  - MJRefresh (3.4.1)
+  - shared_preferences (0.0.1):
+    - Flutter
+  - shared_preferences_macos (0.0.1):
+    - Flutter
+  - shared_preferences_web (0.0.1):
+    - Flutter
   - SnapKit (5.0.1)
-  - SwiftyBeaver (1.8.4)
+  - SwiftyBeaver (1.9.1)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
-  - flutter_app_module (from `./flutterFrameworks`)
+  - Flutter (from `flutter_module/.ios/Flutter/engine`)
+  - flutter_module (from `flutter_module/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
   - HandyJSON (from `https://github.com/alibaba/HandyJSON.git`, branch `dev_for_swift5.0`)
   - Log
   - MJRefresh
+  - shared_preferences (from `flutter_module/.ios/Flutter/.symlinks/shared_preferences/ios`)
+  - shared_preferences_macos (from `flutter_module/.ios/Flutter/.symlinks/shared_preferences_macos/ios`)
+  - shared_preferences_web (from `flutter_module/.ios/Flutter/.symlinks/shared_preferences_web/ios`)
   - SnapKit
   - SwiftyBeaver
 
@@ -25,11 +41,21 @@ SPEC REPOS:
     - SwiftyBeaver
 
 EXTERNAL SOURCES:
-  flutter_app_module:
-    :path: "./flutterFrameworks"
+  Flutter:
+    :path: flutter_module/.ios/Flutter/engine
+  flutter_module:
+    :path: flutter_module/.ios/Flutter
+  FlutterPluginRegistrant:
+    :path: flutter_module/.ios/Flutter/FlutterPluginRegistrant
   HandyJSON:
     :branch: dev_for_swift5.0
     :git: https://github.com/alibaba/HandyJSON.git
+  shared_preferences:
+    :path: flutter_module/.ios/Flutter/.symlinks/shared_preferences/ios
+  shared_preferences_macos:
+    :path: flutter_module/.ios/Flutter/.symlinks/shared_preferences_macos/ios
+  shared_preferences_web:
+    :path: flutter_module/.ios/Flutter/.symlinks/shared_preferences_web/ios
 
 CHECKOUT OPTIONS:
   HandyJSON:
@@ -38,13 +64,18 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
-  flutter_app_module: 91e496cd573afc8cbf0a0112afa55745a5f8ed5b
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_module: 37f078337caf8acad3074374a49bf81442fd3e07
+  FlutterPluginRegistrant: 981eac10595eeb40836954ee94e0e1ef6a2007dd
   HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   Log: 73fab10e8b88f15cef5f322b12c9be87cf19ee6e
-  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  MJRefresh: 3153c59a363159092c08b2177ec3a7d09f90bfaf
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087
+  shared_preferences_web: 141cce0c3ed1a1c5bf2a0e44f52d31eeb66e5ea9
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
+  SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
 
-PODFILE CHECKSUM: 958f6bb9e46227b3172fbcb4b389e8938ef3ef88
+PODFILE CHECKSUM: 455b5dd4a737e862389aac09a875f6792facd42c
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

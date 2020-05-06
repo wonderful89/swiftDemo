@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    var needsLightContent: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()

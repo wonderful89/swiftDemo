@@ -26,6 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             AppDelegate.configWindow(window: window)
         }
+        
+        UIApplication.shared.isStatusBarHidden = false
+//        let time = DispatchTime.now() + 3.0
+//        DispatchQueue.main.asyncAfter(deadline: time) {
+//            UIApplication.shared.setStatusBarHidden(true, with: .fade)
+//        }
         return true
     }
 
