@@ -14,9 +14,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    #if USE_SWIFT_MODULE
-        public var flutterEngine: FlutterEngine?
-    #endif
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         initLog()
@@ -26,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             AppDelegate.configWindow(window: window)
         }
-        
+
         UIApplication.shared.isStatusBarHidden = false
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
 //        let time = DispatchTime.now() + 3.0
 //        DispatchQueue.main.asyncAfter(deadline: time) {
 //            UIApplication.shared.setStatusBarHidden(true, with: .fade)
@@ -37,12 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     fileprivate func initFlutterEngine() {
         #if USE_SWIFT_MODULE
-            flutterEngine = FlutterEngine(name: "")
-            flutterEngine?.run()
-            GeneratedPluginRegistrant.register(with: flutterEngine!)
-        
-            SwiftCommonAppPlugin.register(with: flutterEngine!.registrar(forPlugin: "myplugin/method"));
+        let time = DispatchTime.now() + 0.1
+        DispatchQueue.main.asyncAfter(deadline: time) {
+            SwiftFlutterEngine.shared.setup();
+        }
         #endif
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        log.info("%s", #function)
     }
 
     @available(iOS 13.0, *)

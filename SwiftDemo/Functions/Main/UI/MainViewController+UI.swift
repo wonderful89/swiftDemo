@@ -27,10 +27,9 @@ extension MainViewControllerUI {
             navigationController?.pushViewController(tabNav, animated: true)
         case .flutterEntry:
             #if USE_SWIFT_MODULE
-                let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
-                let flutterViewController =
-                    FlutterViewController(engine: flutterEngine!, nibName: nil, bundle: nil)
-                present(flutterViewController, animated: true, completion: nil)
+                let flutterViewController = DemoFlutterViewController()
+//                present(flutterViewController, animated: true, completion: nil)
+                navigationController?.pushViewController(flutterViewController, animated: true)
             #endif
         default:
             log.info("其他")

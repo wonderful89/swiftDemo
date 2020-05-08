@@ -33,15 +33,15 @@ extension Dictionary {
         print(self.jsonString!)
     }
     
-//    var jsonStr2: String?{
-//        let encoder = JSONEncoder()
-//        if let jsonData = try? encoder.encode(self) {
-//            if let jsonString = String(data: jsonData, encoding: .utf8) {
-//                return jsonString
-//            }
-//        }
-//        return nil
-//    }
+    var jsonStr2: String?{
+        let invalidJson = "Not a valid JSON"
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            return String(bytes: jsonData, encoding: String.Encoding.utf8) ?? invalidJson
+        } catch {
+            return invalidJson
+        }
+    }
 }
 
 //extension Foo {

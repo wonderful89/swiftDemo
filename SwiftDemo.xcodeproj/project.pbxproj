@@ -60,6 +60,8 @@
 		E92F3FDB242A2B2E00E0D1A4 /* RefreshViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */; };
 		E92F3FDD242C5F2500E0D1A4 /* test.docx in Resources */ = {isa = PBXBuildFile; fileRef = E92F3FDC242C5F2500E0D1A4 /* test.docx */; };
 		E9EF17BE24629F62001F2DB5 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EF17BD24629F62001F2DB5 /* UINavigationController.swift */; };
+		E9EF183D24654C38001F2DB5 /* SwfitFlutterEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EF183C24654C38001F2DB5 /* SwfitFlutterEngine.swift */; };
+		E9EF183F24654F49001F2DB5 /* DemoFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EF183E24654F49001F2DB5 /* DemoFlutterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		E92F3FD9242A2B2E00E0D1A4 /* RefreshViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshViewController.xib; sourceTree = "<group>"; };
 		E92F3FDC242C5F2500E0D1A4 /* test.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.docx; sourceTree = "<group>"; };
 		E9EF17BD24629F62001F2DB5 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		E9EF183C24654C38001F2DB5 /* SwfitFlutterEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwfitFlutterEngine.swift; sourceTree = "<group>"; };
+		E9EF183E24654F49001F2DB5 /* DemoFlutterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFlutterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +219,6 @@
 				7833B1DF2412275F00943396 /* Functions */,
 				7833B1DE2412275100943396 /* Components */,
 				7833B1CA2412255300943396 /* AppDelegate.swift */,
-				7800B10224503CD6008CEF1C /* CommonFlutterPlugin.swift */,
 				787B2301241B715D00DDA9F3 /* ExportOCHeader.h */,
 				7833B1CC2412255300943396 /* SceneDelegate.swift */,
 				7833B1CE2412255300943396 /* ViewController.swift */,
@@ -265,6 +268,7 @@
 		78784AF92418BAC000695919 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E9EF183B24654C1C001F2DB5 /* Flutter */,
 				E92F3FC9242A067F00E0D1A4 /* DZNEmptyDataSet */,
 				78819D7E2428B0ED00E37459 /* 解析JSON */,
 				781A207E241A420F0027DA17 /* 文件查看 */,
@@ -366,6 +370,16 @@
 				E92F3FD6242A258600E0D1A4 /* DZTableView.swift */,
 			);
 			path = DZNEmptyDataSet;
+			sourceTree = "<group>";
+		};
+		E9EF183B24654C1C001F2DB5 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				E9EF183C24654C38001F2DB5 /* SwfitFlutterEngine.swift */,
+				E9EF183E24654F49001F2DB5 /* DemoFlutterViewController.swift */,
+				7800B10224503CD6008CEF1C /* CommonFlutterPlugin.swift */,
+			);
+			path = Flutter;
 			sourceTree = "<group>";
 		};
 		F246083388A399D9564B989A /* Pods */ = {
@@ -576,11 +590,13 @@
 				781A209B241B34CC0027DA17 /* FileTestViewController.swift in Sources */,
 				E92F3FC62424E8E100E0D1A4 /* Dictionary.swift in Sources */,
 				E92F3FD7242A258600E0D1A4 /* DZTableView.swift in Sources */,
+				E9EF183F24654F49001F2DB5 /* DemoFlutterViewController.swift in Sources */,
 				781A2086241A430B0027DA17 /* DemoFile.swift in Sources */,
 				78A95E3D241289F60080812A /* MainViewController.swift in Sources */,
 				781A208C241A456D0027DA17 /* MainViewController+Login.swift in Sources */,
 				7800B10324503CD6008CEF1C /* CommonFlutterPlugin.swift in Sources */,
 				E92F3FD4242A224100E0D1A4 /* MessageListViewController.swift in Sources */,
+				E9EF183D24654C38001F2DB5 /* SwfitFlutterEngine.swift in Sources */,
 				787B22FD241B704300DDA9F3 /* UIViewController+Extern.swift in Sources */,
 				7833B1E32412279400943396 /* log.swift in Sources */,
 				781A2084241A42BF0027DA17 /* DocQLPreviewController.swift in Sources */,
