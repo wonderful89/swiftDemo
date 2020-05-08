@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(),
       navigatorObservers: [MyNavigatorObserver()],
       navigatorKey: Routes.globalKey,
-      initialRoute: 'pageA',
+      initialRoute: RoutePages.pageA,
       onGenerateRoute: (RouteSettings settings) {
         var func = Routes.pageRoutes[settings.name];
         if (func != null) {

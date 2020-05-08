@@ -17,6 +17,14 @@ import Foundation
         var sinkOnChanged: FlutterEventSink?
         var listeningOnChanged = false
 
+        public enum MethodName: String {
+            case commonCallToNative, pageRoute
+        }
+
+        public enum VCPageName: String {
+            case UIViewController, FlutterViewController
+        }
+
         public static func register(with registrar: FlutterPluginRegistrar) {
             let channel = FlutterMethodChannel(name: "myplugin/method", binaryMessenger: registrar.messenger())
             let eventChannel = FlutterEventChannel(name: "myplugin/event", binaryMessenger: registrar.messenger())
@@ -35,11 +43,29 @@ import Foundation
                 let params: Dictionary<String, NSObject> = call.arguments as! Dictionary<String, NSObject>
                 let realFun: String = params["fun"] as! String
                 print("realFun = \(realFun)")
-                if realFun == "backToNativeView" {
+                if realFun == MethodName.commonCallToNative.rawValue {
                     print("backtoNativeView in native")
                     if let topController = UIApplication.getTopViewController() {
                         print("topController = \(topController)")
                         topController.navigationController?.popViewController(animated: true)
+                    }
+                } else if realFun == MethodName.pageRoute.rawValue {
+                    let name: String = params["name"] as! String
+                    guard let topController = UIApplication.getTopViewController() else {
+                        return
+                    }
+                    switch name {
+                    case VCPageName.UIViewController.rawValue:
+                        let vc = UIViewController()
+                        vc.view.backgroundColor = UIColor.white
+                        topController.navigationController?.pushViewController(vc, animated: true)
+
+                    case VCPageName.FlutterViewController.rawValue:
+                        let flutterName: String = params["flutterName"] as! String
+                        let vc = DemoFlutterViewController(pageName: flutterName)
+                        topController.navigationController?.pushViewController(vc, animated: true)
+                    default:
+                        print("other")
                     }
                 }
                 result(true)

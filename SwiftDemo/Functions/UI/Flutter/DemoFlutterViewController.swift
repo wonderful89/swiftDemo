@@ -11,7 +11,9 @@ import FlutterPluginRegistrant
 import UIKit
 
 class DemoFlutterViewController: FlutterViewController {
-    init() {
+    var name: String?
+    init(pageName: String?) {
+        self.name = pageName
         super.init(engine: SwiftFlutterEngine.shared, nibName: nil, bundle: nil)
     }
     
@@ -26,7 +28,7 @@ class DemoFlutterViewController: FlutterViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        SwiftFlutterEngine.shared.pushReplacement("pageA", args: ["key1": "value1", "key2": 220])
+        SwiftFlutterEngine.shared.pushReplacement(self.name ?? "pageA", args: ["key1": "value1", "key2": 220])
     }
     
     override func viewDidDisappear(_ animated: Bool) {

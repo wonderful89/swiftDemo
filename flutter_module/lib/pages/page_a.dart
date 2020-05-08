@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_module/channels.dart';
+import 'package:flutter_module/route/route.dart';
 
 class DemoPageA extends StatefulWidget {
   @override
@@ -31,9 +33,33 @@ class _DemoPageAState extends State<DemoPageA> {
             ),
             Divider(),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Routes.globalKey.currentState.pushNamed(RoutePages.pageA, arguments: {'tes44': '34444'});
+              },
               child: Container(
-                child: Text('other'),
+                child: Text('push flutter view'),
+                alignment: Alignment.center,
+                height: 60.0,
+              ),
+            ),
+            Divider(),
+            Divider(),
+            GestureDetector(
+              onTap: () {
+                Channels.commonCallToNative('pageRoute', params: {'test22': '333', 'name': 'UIViewController'});
+              },
+              child: Container(
+                child: Text('push native view(UIViewControler)'),
+                alignment: Alignment.center,
+                height: 60.0,
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Channels.commonCallToNative('pageRoute', params: {'test22': '333', 'name': 'FlutterViewController', 'flutterName': 'pageC'});
+              },
+              child: Container(
+                child: Text('push native view(FlutterViewController)'),
                 alignment: Alignment.center,
                 height: 60.0,
               ),
